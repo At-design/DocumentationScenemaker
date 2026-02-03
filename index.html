@@ -329,6 +329,47 @@
             font-weight: 700;
         }
 
+        /* Image styles */
+        .step-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: imageFadeIn 0.8s ease-out 0.5s both;
+        }
+
+        @keyframes imageFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .image-caption {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-top: 15px;
+            font-style: italic;
+            animation: captionFadeIn 0.8s ease-out 0.7s both;
+        }
+
+        @keyframes captionFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -470,6 +511,9 @@
                         Make sure <code>Import Method</code> is set to <span class="highlight">"Append"</span> mode
                     </div>
                 </div>
+
+                <img src="user_input_files/image.png" alt="Asset Library Installation" class="step-image">
+                <p class="image-caption">Asset library configuration in Blender preferences</p>
             </section>
 
             <!-- Section 3: Customization -->
